@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Imagen Chat</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@1.0.0"
+        }
+      }
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <header>
+        <h1>Gemini Imagen Chat</h1>
+    </header>
+
+    <main id="chat-container">
+        <!-- Chat messages will be dynamically inserted here -->
+         <div class="chat-message ai-message">
+            <div class="message-content">
+                <p>Hello! Describe the image you want me to create.</p>
+            </div>
+        </div>
+    </main>
+
+    <div id="chat-form-container">
+        <form id="prompt-form">
+            <input type="text" id="prompt-input" placeholder="Message Gemini Imagen..." aria-label="Image generation prompt" required autocomplete="off">
+            <button type="submit" id="generate-btn" aria-label="Generate images">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </form>
+         <footer>
+            <p>GEMINI-IMAGEN-API BY JOPE</p>
+        </footer>
+    </div>
+
+    <!-- Lightbox for Fullscreen Image Viewing -->
+    <div id="lightbox-overlay">
+      <span id="close-lightbox" class="close-btn" aria-label="Close fullscreen image viewer">&times;</span>
+      <div class="lightbox-content">
+        <img id="lightbox-image" src="" alt="Fullscreen generated image">
+        <a id="download-link" class="download-btn" href="#" download="gemini-generated-image.jpeg" aria-label="Download image">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+          </svg>
+          <span>Download</span>
+        </a>
+      </div>
+    </div>
+
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
